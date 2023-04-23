@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import Container from '@mui/material/Container';
+import GithHubReposSearch from 'components/GithHubReposSearch';
 
 function Home() {
   return (
-    <>
-      <h1>Hello World</h1>
-      <Link to="/example">GO to Example page</Link>
-    </>
+    <Container maxWidth="sm">
+      <GithHubReposSearch />
+    </Container>
   );
 }
 

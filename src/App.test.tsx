@@ -3,13 +3,13 @@ import { MemoryRouter } from 'react-router-dom';
 import { App, WrappedApp } from './App';
 
 describe('App', () => {
-  it.skip('Renders Hello World', () => {
+  it('Renders Hello World', () => {
     // ARRANGE
     render(<WrappedApp />);
     // ACT
     // EXPECT
     expect(
-      screen.getByRole('heading', { name: /Hello World/i })
+      screen.getByRole('heading', { name: /repositories/i })
     ).toBeInTheDocument();
   });
   it('Renders Not Found if invalid path ', () => {
