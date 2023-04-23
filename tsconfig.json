@@ -19,7 +19,6 @@
         "paths": {
           "src/*": [ "./src/*" ],
           "api/*": [ "./src/api/*" ],
-          "assets/*": [ "./src/assets/*" ],
           "components/*": [ "./src/components/*" ],
           "queries/*": [ "./src/queries/*" ],
           "pages/*": [ "./src/pages/*" ],

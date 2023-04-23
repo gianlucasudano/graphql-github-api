@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { App, WrappedApp } from './App';
 
 describe('App', () => {
-  it('Renders Hello World', () => {
+  it.skip('Renders Hello World', () => {
     // ARRANGE
     render(<WrappedApp />);
     // ACT

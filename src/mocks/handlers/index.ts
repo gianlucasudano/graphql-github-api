@@ -1,8 +1,2 @@
-export {
-  exampleGetResponseMocked,
-  getExampleEmptyResponseHandler,
-  getExampleFailedResponseHandler,
-  handlers,
-  postExampleHappyResponseHandler,
-  postExampleFailedResponseHandler,
-} from './handlers';
+/* eslint-disable import/prefer-default-export */
+export { handlers } from './handlers';
