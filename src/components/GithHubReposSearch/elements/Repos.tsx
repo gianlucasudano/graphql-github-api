@@ -21,7 +21,7 @@ interface SingleRepoProps {
   stargazerCount: number;
 }
 
-interface ReposProps {
+export interface RepoNodeProps {
   node: SingleRepoProps;
 }
 
@@ -51,7 +51,7 @@ function SingleRepo({
   );
 }
 
-function Repos({ dataRepos }: { dataRepos: ReposProps[] | [] }) {
+function Repos({ dataRepos }: { dataRepos: RepoNodeProps[] | [] }) {
   const theme = useTheme();
   return (
     <Stack gap={1} sx={{ overflowY: 'scroll', maxHeight: theme.spacing(40) }}>

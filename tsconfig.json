@@ -25,6 +25,6 @@
           "mocks/*": [ "./src/mocks/*" ],
         }
   },
-  "include": ["src", ".eslintrc.cjs", "prettier.config.cjs", "vite.config.ts"],
+  "include": ["src", ".eslintrc.cjs", "prettier.config.cjs", "vite.config.ts", "codegen.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
