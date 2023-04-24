@@ -1,1 +1,1 @@
-export { handlers, repositories } from './handlers';
+export { handlers, repositories, reactMockSearch } from './handlers';

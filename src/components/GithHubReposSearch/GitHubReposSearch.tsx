@@ -41,11 +41,14 @@ function GitHubReposSearch() {
     searchByRepoName,
     variables
   );
+
   return (
     <Paper elevation={3}>
       <Stack gap={2} mt={2} mb={2} padding={4}>
         <SearchForm setRepoName={setRepoName} />
-        {data && <Repos dataRepos={data.search.edges as RepoNodeProps[]} />}
+        {data && data.search && data.search.edges && (
+          <Repos dataRepos={data.search.edges as RepoNodeProps[]} />
+        )}
         {isInitialLoading && (
           <Box>
             <LinearProgress />

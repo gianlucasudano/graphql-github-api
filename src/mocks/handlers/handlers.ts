@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { graphql } from 'msw';
+
 export const repositories = [
   {
     node: {
@@ -64,4 +67,105 @@ export const repositories = [
   },
 ];
 
-export const handlers = [];
+export const reactMockSearch = {
+  search: {
+    edges: [
+      {
+        node: {
+          forkCount: 3700,
+          id: 'MDEwOlJlcG9zaXRvcnkxMzU3ODYwOTM=',
+          name: 'react',
+          resourcePath: '/typescript-cheatsheets/react',
+          stargazerCount: 40614,
+        },
+      },
+      {
+        node: {
+          forkCount: 607,
+          id: 'MDEwOlJlcG9zaXRvcnk5MzUwMzU0NQ==',
+          name: 'React',
+          resourcePath: '/HackYourFuture/React',
+          stargazerCount: 261,
+        },
+      },
+      {
+        node: {
+          forkCount: 23629,
+          id: 'MDEwOlJlcG9zaXRvcnk3MDEwNzc4Ng==',
+          name: 'next.js',
+          resourcePath: '/vercel/next.js',
+          stargazerCount: 104881,
+        },
+      },
+      {
+        node: {
+          forkCount: 23178,
+          id: 'MDEwOlJlcG9zaXRvcnkyOTAyODc3NQ==',
+          name: 'react-native',
+          resourcePath: '/facebook/react-native',
+          stargazerCount: 109144,
+        },
+      },
+      {
+        node: {
+          forkCount: 100,
+          id: 'MDEwOlJlcG9zaXRvcnk2MTU3MzcwMg==',
+          name: 'react',
+          resourcePath: '/ui-router/react',
+          stargazerCount: 450,
+        },
+      },
+      {
+        node: {
+          forkCount: 10007,
+          id: 'MDEwOlJlcG9zaXRvcnkxOTg3MjQ1Ng==',
+          name: 'react-router',
+          resourcePath: '/remix-run/react-router',
+          stargazerCount: 50169,
+        },
+      },
+      {
+        node: {
+          forkCount: 127,
+          id: 'MDEwOlJlcG9zaXRvcnk2NDQ2NjM2Mg==',
+          name: 'react',
+          resourcePath: '/zf-huangxiao/react',
+          stargazerCount: 67,
+        },
+      },
+      {
+        node: {
+          forkCount: 7069,
+          id: 'MDEwOlJlcG9zaXRvcnkxMDU5NjMyNTM=',
+          name: 'react.dev',
+          resourcePath: '/reactjs/react.dev',
+          stargazerCount: 9407,
+        },
+      },
+      {
+        node: {
+          forkCount: 6699,
+          id: 'MDEwOlJlcG9zaXRvcnkyMjY3MDg1Nw==',
+          name: 'awesome-react',
+          resourcePath: '/enaqx/awesome-react',
+          stargazerCount: 54980,
+        },
+      },
+      {
+        node: {
+          forkCount: 79,
+          id: 'MDEwOlJlcG9zaXRvcnkzMDgzMTQ3Njc=',
+          name: 'React',
+          resourcePath: '/Internshala-Online-Trainings/React',
+          stargazerCount: 116,
+        },
+      },
+    ],
+  },
+};
+
+export const getReposSearch = graphql.query('Search', (req, res, ctx) => {
+  return res(ctx.data(reactMockSearch));
+});
+
+export const handlers = [getReposSearch];
